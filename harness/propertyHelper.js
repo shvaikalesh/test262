@@ -45,8 +45,9 @@ function verifyProperty(obj, name, desc, options) {
     return true;
   }
 
-  assert(
-    Object.prototype.hasOwnProperty.call(obj, name),
+  assert.notSameValue(
+    originalDesc,
+    undefined,
     "obj should have an own property " + nameStr
   );
 
